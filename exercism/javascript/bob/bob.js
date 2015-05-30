@@ -7,6 +7,10 @@
 var Bob = function() {};
 
 Bob.prototype.hey = function(input) {
+    
+if(input.trim() === ''){
+    return "Fine. Be that way!";
+}
 
 if(input == input.toUpperCase()){ //are we yelling?
     
@@ -18,12 +22,13 @@ if(input == input.toUpperCase()){ //are we yelling?
         else return "Whatever."; //must be just numbers &|| other chars and not a question.
     }
     
-    else return "Whoa, chill out!"
+    else return "Whoa, chill out!";
 }
 
 if(input.slice(-1) == "?") { //only if the last character is ? do we consider input a question
     return "Sure.";
 }
+
 
 else return "Whatever.";
 };
